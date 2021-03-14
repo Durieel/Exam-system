@@ -6,30 +6,30 @@
       
   •	grensesnittet skal programmeres basert på tkinter-modulen og grid som «geometry manager» <br />
   
-  •	Datoer registreres i formatet <år-måned-dag>, dvs 20180510 for 10.05.2018
+  •	Datoer registreres i formatet <år-måned-dag>, dvs 20180510 for 10.05.2018 <br />
   
-  •	Nye studenter nummereres fortløpende, og applikasjonen skal tildele et nytt studentnr ved å øke største registrerte studentnr med 1. Det skal ikke brukes autoincrement i databasen
+  •	Nye studenter nummereres fortløpende, og applikasjonen skal tildele et nytt studentnr ved å øke største registrerte studentnr med 1. Det skal ikke brukes autoincrement i databasen <br />
   
-  •	Vi forutsetter at «en eksamen i et emne» kan gjennomføres på ett rom
+  •	Vi forutsetter at «en eksamen i et emne» kan gjennomføres på ett rom <br />
   
-  Tabellstruktur, databasen oblig2021 :
+  Tabellstruktur, databasen oblig2021 : <br />
   
-Student(__Studentnr, Fornavn, Etternavn, Epost, Telefon)
+Student(__Studentnr, Fornavn, Etternavn, Epost, Telefon) <br />
 
-Emne(__Emnekode, Emnenavn, Studiepoeng)
+Emne(__Emnekode, Emnenavn, Studiepoeng) <br />
 
-Rom(__Romnr, Antallplasser)
+Rom(__Romnr, Antallplasser) <br />
 
-Eksamen(__Emnekode*, Dato, Romnr*)
+Eksamen(__Emnekode*, Dato, Romnr*) <br />
 
-Eksamensresultat(__Studentnr*, Emnekode*, Dato*, Karakter)
+Eksamensresultat(__Studentnr*, Emnekode*, Dato*, Karakter) <br />
 	
-_	= primærnøkkel/PK
+_	= primærnøkkel/PK 
 * = fremmednøkkel/FK
 
-Mek den sammensatte fremmednøkkelen fra Eksamensresultat til Eksamen.
+Mek den sammensatte fremmednøkkelen fra Eksamensresultat til Eksamen.<br />
 
-Felttyper/lengde Studentnr 
+Felttyper/lengde Studentnr  <br />
 CHAR(6) 
 Fornavn CHAR(30) 
 Etternavn CHAR(20) 
@@ -43,23 +43,23 @@ Antallplasser INTEGER(3)
 Dato DATE 
 Karakter CHAR(1)
 
-Oppgave: system for håndtering av eksamen ved USN
-Det skal programmeres et grafisk basert grensesnitt for applikasjonen og applikasjonen skal kjøre mot en database i MySQL.
+Oppgave: system for håndtering av eksamen ved USN<br />
+Det skal programmeres et grafisk basert grensesnitt for applikasjonen og applikasjonen skal kjøre mot en database i MySQL.<br />
 
 
-Det skal lages en applikasjon for eksamenskontoret ved USN. Applikasjonen skal brukes til planlegging av eksamener og ajourhold av eksamensresultater for studentene.
-Det skal være mulig med ajourhold av studenter, eksamen og eksamensresultater.
-Det er følgende krav til den nye applikasjonen:
+Det skal lages en applikasjon for eksamenskontoret ved USN. Applikasjonen skal brukes til planlegging av eksamener og ajourhold av eksamensresultater for studentene.<br />
+Det skal være mulig med ajourhold av studenter, eksamen og eksamensresultater.<br />
+Det er følgende krav til den nye applikasjonen:<br />
 
-•	kunne ajourholde framtidige eksamener og kontrollere at et rom bare settes opp med en eksamen pr dag
-•	utskrift/visning av alle eksamener på en dag, med informasjon om emne og rom
-•	utskrift/visning av alle eksamener i en periode, ordnet etter dato med informasjon om emne og rom
-•	registrere karakterer for en avholdt eksamen samlet
-•	utskrift/visning av alle eksamensresultater i et emne («karakterliste»), dvs alle studenter med oppnådd karakter ordnet etter studentnr
-•	utskrift/visning av karakterstatistikk for en gjennomført eksamen i et emne med emneopplysninger og en opptelling av antall kandidater på hver karakter («karakterfordeling»)
-•	utskrift av alle eksamensresultater med emnenavn og antall studiepoeng for en student (hvor en kan ha ett eller flere eksamensresultater i samme emne), ordnet etter eksamensdato
-•	utskrift av vitnemål for en student. Ved flere avlagte eksamener i samme emne skal kun ett/beste resultat komme på vitnemålet. 
-Emnene sorteres på fagnivå og emnekode, dvs alle emnekoder i 1000-serien sorteres og kommer før alle emnekodene i 2000-serien osv. 
-Vitnemålet må ha en summering av antall oppnådde studiepoeng for beståtte emner
+•	kunne ajourholde framtidige eksamener og kontrollere at et rom bare settes opp med en eksamen pr dag<br />
+•	utskrift/visning av alle eksamener på en dag, med informasjon om emne og rom<br />
+•	utskrift/visning av alle eksamener i en periode, ordnet etter dato med informasjon om emne og rom<br />
+•	registrere karakterer for en avholdt eksamen samlet<br />
+•	utskrift/visning av alle eksamensresultater i et emne («karakterliste»), dvs alle studenter med oppnådd karakter ordnet etter studentnr<br />
+•	utskrift/visning av karakterstatistikk for en gjennomført eksamen i et emne med emneopplysninger og en opptelling av antall kandidater på hver karakter («karakterfordeling»)<br />
+•	utskrift av alle eksamensresultater med emnenavn og antall studiepoeng for en student (hvor en kan ha ett eller flere eksamensresultater i samme emne), ordnet etter eksamensdato<br />
+•	utskrift av vitnemål for en student. Ved flere avlagte eksamener i samme emne skal kun ett/beste resultat komme på vitnemålet. <br />
+Emnene sorteres på fagnivå og emnekode, dvs alle emnekoder i 1000-serien sorteres og kommer før alle emnekodene i 2000-serien osv. <br />
+Vitnemålet må ha en summering av antall oppnådde studiepoeng for beståtte emner<br />
 
 
