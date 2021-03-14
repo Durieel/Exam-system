@@ -30,18 +30,18 @@ _	= primærnøkkel/PK
 Mek den sammensatte fremmednøkkelen fra Eksamensresultat til Eksamen.<br />
 
 Felttyper/lengde Studentnr  <br />
-CHAR(6) 
-Fornavn CHAR(30) 
-Etternavn CHAR(20) 
-Epost CHAR(40) 
-Telefon CHAR(8)
-Emnekode CHAR(8) 
-Emnenavn CHAR(40)
-Studiepoeng DECIMAL(3,1) 
-Romnr CHAR(4)
-Antallplasser INTEGER(3)
-Dato DATE 
-Karakter CHAR(1)
+CHAR(6) <br />
+Fornavn CHAR(30) <br />
+Etternavn CHAR(20) <br />
+Epost CHAR(40) <br />
+Telefon CHAR(8)<br />
+Emnekode CHAR(8) <br />
+Emnenavn CHAR(40)<br />
+Studiepoeng DECIMAL(3,1) <br />
+Romnr CHAR(4)<br />
+Antallplasser INTEGER(3)<br />
+Dato DATE <br />
+Karakter CHAR(1)<br />
 
 Oppgave: system for håndtering av eksamen ved USN<br />
 Det skal programmeres et grafisk basert grensesnitt for applikasjonen og applikasjonen skal kjøre mot en database i MySQL.<br />
